@@ -82,3 +82,9 @@ add_tag_names() {
 
   done
 }
+
+# Usage:
+# $ command_which_generates_fix_output | prettyfix
+prettifix() {
+  sed --unbuffered "s/"$'\x01'"/ | /g"
+}
